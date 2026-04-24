@@ -2,159 +2,97 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<title>Portiva Logistics</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>التخليص الجمركي - Portiva</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
+*{margin:0;padding:0;box-sizing:border-box;font-family:Tajawal}
+
+/* BACKGROUND نفس الرئيسية */
 body{
-    margin:0;
-    font-family:Tajawal, Tahoma;
-    background:#0b1c2c;
-    color:#fff;
+color:#fff;
+
+background:
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
+url('hero-final.jpg') center/cover no-repeat;
+
+background-attachment:fixed;
 }
 
-/* NAV */
+/* NAVBAR */
 nav{
-    position:fixed;
-    width:100%;
-    top:0;
-    display:flex;
-    justify-content:space-between;
-    padding:15px 40px;
-    background:rgba(0,0,0,0.6);
-    z-index:1000;
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+padding:15px 50px;
+background:rgba(0,0,0,0.6);
+z-index:1000;
 }
 
 nav a{
-    color:#fff;
-    margin:0 10px;
-    text-decoration:none;
+color:#fff;
+text-decoration:none;
+margin:0 10px;
 }
 
-/* HERO */
-.hero{
-    height:100vh;
-    background:url('hero-new.jpg') center/cover no-repeat;
-    display:flex;
-    align-items:center;
-    justify-content:flex-end;
-    padding:80px;
+.logo{
+font-weight:bold;
 }
 
-/* HERO TEXT */
-.hero-box{
-    max-width:500px;
+/* CONTENT BOX */
+.container{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+text-align:center;
+padding:20px;
+}
+
+.box{
+background:rgba(0,0,0,0.6);
+padding:40px;
+border-radius:20px;
+max-width:400px;
+backdrop-filter:blur(6px);
+}
+
+.box i{
+font-size:50px;
+color:#0d6efd;
+margin-bottom:15px;
+}
+
+.box h1{
+margin-bottom:15px;
+}
+
+.box p{
+margin-bottom:10px;
+line-height:1.6;
 }
 
 /* BUTTON */
 .btn{
-    background:linear-gradient(45deg,#2ea3ff,#0066ff);
-    padding:12px 30px;
-    border-radius:30px;
-    color:#fff;
-    text-decoration:none;
+display:inline-block;
+margin-top:15px;
+padding:12px 25px;
+background:#0d6efd;
+border-radius:25px;
+color:#fff;
+text-decoration:none;
 }
 
-/* SERVICES */
-.services{
-    width:90%;
-    margin:-70px auto;
-    background:rgba(30,60,100,0.9);
-    backdrop-filter:blur(12px);
-    border-radius:20px;
-    padding:30px;
-    display:flex;
-    justify-content:space-between;
-}
-
-.service{
-    text-align:center;
-    width:23%;
-}
-
-.service svg{
-    width:50px;
-    height:50px;
-    fill:#7bd3ff;
-    margin-bottom:15px;
-    filter: drop-shadow(0 0 10px rgba(0,150,255,0.5));
-}
-
-/* ABOUT */
-.about{
-    padding:60px 40px;
-    text-align:center;
-    line-height:2;
-}
-
-/* WORK */
-.work{
-    background:#eee;
-    color:#000;
-    padding:40px;
-    text-align:center;
-}
-
-.gallery{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-    justify-content:center;
-}
-
-.gallery img{
-    width:180px;
-    height:120px;
-    object-fit:cover;
-    border-radius:10px;
-}
-
-/* FORM */
-.form-section{
-    padding:40px;
-    text-align:center;
-}
-
-.form{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-    justify-content:center;
-}
-
-.form input{
-    padding:12px;
-    width:200px;
-    border-radius:10px;
-    border:none;
-}
-
-.form button{
-    background:#0d6efd;
-    color:#fff;
-    border:none;
-    padding:12px 25px;
-    border-radius:10px;
-}
-
-/* FOOTER */
-footer{
-    background:#08131f;
-    padding:20px;
-    text-align:center;
-}
-
-/* WHATSAPP */
-.whatsapp{
-    position:fixed;
-    bottom:20px;
-    left:20px;
-    background:#25D366;
-    color:#fff;
-    padding:15px;
-    border-radius:50%;
-    font-size:22px;
-    text-decoration:none;
+.back{
+display:block;
+margin-top:15px;
+color:#aaa;
+text-decoration:none;
 }
 
 </style>
@@ -164,110 +102,44 @@ footer{
 
 <!-- NAV -->
 <nav>
-    <div>
-        <a href="#">الرئيسية</a>
-        <a href="#">خدماتنا</a>
-        <a href="#">أعمالنا</a>
-        <a href="#">اتصل بنا</a>
-    </div>
-    <div>PORTIVA</div>
+<div>
+<a href="index.html">الرئيسية</a>
+<a href="index.html#services">خدماتنا</a>
+<a href="index.html#work">أعمالنا</a>
+<a href="index.html#form">طلب عرض سعر</a>
+</div>
+<div class="logo">PORTIVA</div>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-    <div class="hero-box">
-        <h1>PORTIVA LOGISTICS</h1>
-        <p>التخليص الجمركي والنقل من جميع الموانئ</p>
-        <p>بسرعة - أمان - احترافية</p>
-        <a class="btn" href="#">تواصل معنا الآن</a>
-    </div>
-</section>
+<!-- CONTENT -->
+<div class="container">
 
-<!-- SERVICES -->
-<section class="services">
+<div class="box">
 
-    <div class="service">
-        <svg viewBox="0 0 16 16"><path d="M8 0L0 4v8l8 4 8-4V4L8 0z"/></svg>
-        <h3>إدارة الشحنات</h3>
-        <p>متابعة احترافية لجميع الشحنات</p>
-    </div>
+<i class="fa-solid fa-ship"></i>
 
-    <div class="service">
-        <svg viewBox="0 0 16 16"><path d="M8 0a2 2 0 110 4 2 2 0 010-4zm1 5v5.93l3.5-2.02.5.86L8 13 3 9.77l.5-.86L7 10.93V5h2z"/></svg>
-        <h3>خدمات الميناء</h3>
-        <p>خدمات متكاملة داخل الموانئ</p>
-    </div>
+<h1>التخليص الجمركي</h1>
 
-    <div class="service">
-        <svg viewBox="0 0 16 16"><path d="M0 1h10v8H0V1zm10 2h3l3 3v3h-6V3zM2 13a2 2 0 104 0 2 2 0 00-4 0zm8 0a2 2 0 104 0 2 2 0 00-4 0z"/></svg>
-        <h3>نقل الحاويات</h3>
-        <p>نقل آمن وسريع</p>
-    </div>
+<p>
+نقدم خدمات التخليص الجمركي (صادر / وارد)  
+بسرعة واحترافية من جميع الموانئ
+</p>
 
-    <div class="service">
-        <svg viewBox="0 0 16 16"><path d="M0 11l8 5 8-5H0zm2-1h12l-1-4H3l-1 4zm3-5h6V3H5v2z"/></svg>
-        <h3>التخليص الجمركي</h3>
-        <p>تخليص سريع من جميع الموانئ</p>
-    </div>
+<p>
+✔ إنهاء جميع الإجراءات  
+✔ تقليل وقت الإفراج  
+✔ متابعة كاملة للشحنة  
+</p>
 
-</section>
+<a href="https://wa.me/201204646350?text=استفسار عن التخليص الجمركي" class="btn" target="_blank">
+تواصل واتساب
+</a>
 
-<!-- ABOUT -->
-<section class="about">
-    <h2>من نحن</h2>
-    <p>
-    نحن شركة Portiva Logistics متخصصون في تقديم خدمات لوجستية متكاملة تشمل
-    التخليص الجمركي، نقل الحاويات، وخدمات الموانئ.
-    نعمل بخبرة عالية لضمان سرعة التنفيذ وأمان الشحنات.
-    </p>
-</section>
+<a href="index.html" class="back">رجوع للرئيسية</a>
 
-<!-- WORK -->
-<section class="work">
-    <h2>أعمالنا من أرض الواقع</h2>
+</div>
 
-    <div class="gallery">
-        <img src="img1.jpg">
-        <img src="img2.jpg">
-        <img src="img3.jpg">
-        <img src="img4.jpg">
-        <img src="img5.jpg">
-        <img src="img6.jpg">
-        <img src="img7.jpg">
-        <img src="img8.jpg">
-        <img src="img9.jpg">
-        <img src="img10.jpg">
-        <img src="img11.jpeg">
-        <img src="img12.jpeg">
-        <img src="img13.jpeg">
-        <img src="img14.jpeg">
-        <img src="img15.jpeg">
-    </div>
-</section>
-
-<!-- FORM -->
-<section class="form-section">
-    <h2>طلب عرض سعر</h2>
-
-    <div class="form">
-        <input placeholder="الاسم الكامل">
-        <input placeholder="رقم الهاتف">
-        <input placeholder="نوع الحاوية">
-        <input placeholder="عدد الحاويات">
-        <button>إرسال الطلب</button>
-    </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-<p>📍 الاسكندرية - باب 10</p>
-<p>📧 portivalogistics1@gmail.com</p>
-<p>📞 01204646350</p>
-<p>© 2026 Portiva Logistics</p>
-</footer>
-
-<!-- WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/201204646350" target="_blank">💬</a>
+</div>
 
 </body>
 </html>
