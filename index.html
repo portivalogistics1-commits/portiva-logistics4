@@ -5,71 +5,124 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portiva Logistics</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Tajawal',sans-serif}
+body{background:#071521;color:#fff}
 
-body{
-margin:0;
-font-family:Tajawal;
+/* NAV */
+nav{
+position:fixed;top:0;right:0;left:0;
+display:flex;justify-content:space-between;align-items:center;
+padding:15px 50px;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);
+z-index:1000
 }
+nav a{color:#fff;text-decoration:none;margin:0 10px;font-size:14px;opacity:.9}
+nav a:hover{opacity:1}
+.logo{font-weight:700}
 
-/* BACKGROUND نفس الصورة بالحرف */
+/* HERO */
 .hero{
 height:100vh;
-background:url('hero-final.jpg') center/cover no-repeat;
-position:relative;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.75)),
+url('hero-final.jpg') center/cover no-repeat;
+display:flex;align-items:center;justify-content:flex-end;
+padding:100px 80px
+}
+.hero-box{max-width:480px;text-align:right}
+.hero-box img{width:140px;margin-bottom:10px}
+.hero-box h1{font-size:48px;margin-bottom:10px}
+.hero-box p{opacity:.9;margin-bottom:15px}
+.btn{
+display:inline-block;padding:12px 24px;border-radius:25px;
+background:linear-gradient(90deg,#4aa3ff,#0d6efd);
+color:#fff;text-decoration:none
 }
 
-/* كروت الخدمات clickable */
-.overlay-buttons{
-position:absolute;
-bottom:60px;
-left:50%;
-transform:translateX(-50%);
-display:flex;
-gap:15px;
-flex-wrap:wrap;
+/* SERVICES (زي الكروت الزرقا) */
+.services{
+margin-top:-80px;
+display:flex;justify-content:center;gap:15px;flex-wrap:wrap
 }
-
-/* كل كارت */
-.card{
+.service{
 width:200px;
-height:120px;
-cursor:pointer;
+background:#0b2b4a;
+border-radius:18px;
+padding:25px 15px;
+text-align:center;
+border:1px solid #0d6efd33;
+transition:.25s
 }
+.service:hover{transform:translateY(-5px)}
+.service a{color:#fff;text-decoration:none;display:block}
 
-/* تخليها شفافة عشان الشكل يبقى نفس الصورة */
-.card a{
-display:block;
-width:100%;
-height:100%;
+/* أيقونة جوه دايرة */
+.icon{
+width:70px;height:70px;border-radius:50%;
+margin:0 auto 12px;
+display:flex;align-items:center;justify-content:center;
+background:radial-gradient(circle at 30% 30%, #4aa3ff, #0d6efd);
+box-shadow:0 8px 20px rgba(13,110,253,.5)
 }
+.icon i{font-size:28px}
 
+.service h3{font-size:16px}
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
+<nav>
+<div>
+<a href="#">الرئيسية</a>
+<a href="#services">خدماتنا</a>
+</div>
+<div class="logo">PORTIVA</div>
+</nav>
+
+<!-- HERO -->
 <section class="hero">
+<div class="hero-box">
+<img src="logo.png">
+<h1>PORTIVA</h1>
+<p>التخليص الجمركي والنقل والشحن من جميع الموانئ</p>
+<a class="btn" href="https://wa.me/201204646350">تواصل معنا</a>
+</div>
+</section>
 
-<!-- كروت الخدمات (فوق الصورة) -->
-<div class="overlay-buttons">
+<!-- SERVICES -->
+<section id="services" class="services">
 
-<div class="card">
-<a href="https://wa.me/201204646350?text=استفسار عن التخليص الجمركي"></a>
+<div class="service">
+<a href="customs.html">
+<div class="icon"><i class="fa-solid fa-ship"></i></div>
+<h3>التخليص الجمركي</h3>
+</a>
 </div>
 
-<div class="card">
-<a href="https://wa.me/201204646350?text=استفسار عن نقل الحاويات"></a>
+<div class="service">
+<a href="transport.html">
+<div class="icon"><i class="fa-solid fa-truck"></i></div>
+<h3>نقل الحاويات</h3>
+</a>
 </div>
 
-<div class="card">
-<a href="https://wa.me/201204646350?text=استفسار عن خدمات الميناء"></a>
+<div class="service">
+<a href="port.html">
+<div class="icon"><i class="fa-solid fa-anchor"></i></div>
+<h3>خدمات الميناء</h3>
+</a>
 </div>
 
-<div class="card">
-<a href="https://wa.me/201204646350?text=استفسار عن الشحن"></a>
-</div>
-
+<div class="service">
+<a href="shipping.html">
+<div class="icon"><i class="fa-solid fa-globe"></i></div>
+<h3>الشحن الدولي</h3>
+</a>
 </div>
 
 </section>
