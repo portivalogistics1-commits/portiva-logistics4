@@ -4,13 +4,14 @@
 <meta charset="UTF-8">
 <title>Portiva Logistics</title>
 
+<!-- FONT AWESOME (حل مشكلة الأيقونات) -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
 body{
     margin:0;
-    font-family:Tahoma;
+    font-family:Tajawal, Tahoma;
     background:#0b1c2c;
     color:#fff;
 }
@@ -64,37 +65,28 @@ nav a{
 
 .hero-box img{
     width:120px;
-    margin-bottom:10px;
 }
 
 .hero-box h1{
     font-size:48px;
-    margin:10px 0;
-}
-
-.hero-box p{
-    font-size:18px;
-    margin:8px 0;
 }
 
 .btn{
     background:#0d6efd;
-    padding:10px 25px;
+    padding:12px 30px;
     border-radius:25px;
     color:#fff;
     text-decoration:none;
-    display:inline-block;
-    margin-top:10px;
 }
 
-/* SERVICES (زي الصورة) */
+/* SERVICES */
 .services{
     width:90%;
-    margin:-60px auto 40px;
-    background:rgba(20,40,70,0.9);
-    backdrop-filter:blur(10px);
-    border-radius:15px;
-    padding:25px;
+    margin:-70px auto 40px;
+    background:rgba(20,40,70,0.95);
+    backdrop-filter:blur(12px);
+    border-radius:20px;
+    padding:30px;
     display:flex;
     justify-content:space-between;
 }
@@ -105,8 +97,8 @@ nav a{
 }
 
 .service i{
-    font-size:40px;
-    color:#3da5ff;
+    font-size:45px;
+    color:#4db8ff;
     margin-bottom:10px;
 }
 
@@ -132,6 +124,35 @@ nav a{
     border-radius:10px;
 }
 
+/* FORM */
+.form-section{
+    background:#0b1c2c;
+    padding:30px;
+    text-align:center;
+}
+
+.form{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.form input{
+    padding:12px;
+    width:200px;
+    border-radius:10px;
+    border:none;
+}
+
+.form button{
+    background:#0d6efd;
+    color:#fff;
+    border:none;
+    padding:12px 25px;
+    border-radius:10px;
+}
+
 /* FOOTER */
 footer{
     background:#08131f;
@@ -139,11 +160,28 @@ footer{
     text-align:center;
 }
 
+.social i{
+    margin:10px;
+    font-size:20px;
+}
+
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    left:20px;
+    background:#25D366;
+    color:#fff;
+    font-size:25px;
+    padding:15px;
+    border-radius:50%;
+}
+
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
     <div>
         <a href="#">الرئيسية</a>
@@ -175,7 +213,7 @@ footer{
     </div>
 
     <div class="service">
-        <i class="fa-solid fa-truck"></i>
+        <i class="fa-solid fa-truck-fast"></i>
         <h3>نقل الحاويات</h3>
         <p>نقل آمن وسريع</p>
     </div>
@@ -187,7 +225,7 @@ footer{
     </div>
 
     <div class="service">
-        <i class="fa-solid fa-box"></i>
+        <i class="fa-solid fa-boxes-stacked"></i>
         <h3>إدارة الشحنات</h3>
         <p>متابعة احترافية</p>
     </div>
@@ -217,9 +255,38 @@ footer{
     </div>
 </section>
 
+<!-- FORM -->
+<section class="form-section">
+    <h2>طلب عرض سعر</h2>
+
+    <div class="form">
+        <input placeholder="الاسم الكامل">
+        <input placeholder="رقم الهاتف">
+        <input placeholder="نوع الحاوية">
+        <input placeholder="عدد الحاويات">
+        <button>إرسال الطلب</button>
+    </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
-    © 2026 Portiva Logistics
+
+    <p>📧 portivalogistics1@gmail.com</p>
+
+    <div class="social">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-linkedin"></i>
+        <i class="fab fa-whatsapp"></i>
+    </div>
+
+    <p>© 2026 Portiva Logistics</p>
+
 </footer>
+
+<!-- WHATSAPP BUTTON -->
+<a class="whatsapp" href="https://wa.me/201000000000" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
 
 </body>
 </html>
